@@ -21,6 +21,9 @@ if (88 <= $Freq ) {
 <html>
 	
 	<head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
 	<title>Raspi Freq page</title>
 	<!-- <link rel="stylesheet" type="text/css" href="./css/ryhma9.css">
 	-->	
@@ -46,9 +49,9 @@ if (88 <= $Freq ) {
 				<label>Freq  :</label><input type = "text" name = "Freq" class = "box"/><br /><br />
 				<input type = "submit" value = " Submit "/><br />
 			</form>
-			Or Blick just Led <a href="cgi-bin/blink_25.sh">Blink led 25</a><br>
+			Or Blick just Led <a href="cgi-bin/blink_25.sh" target="_blank">Blink led 25</a><br>
 			Or <a href="./upload.php">upload</a> wav or mp3 or jpg file to system <br>
-			Or Just Enjoy the view
+			Or Just Enjoy the view of <a href="./rrd/">statistics</a>
 			<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					
 			</div>
