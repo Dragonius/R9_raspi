@@ -23,19 +23,19 @@ DISP="-v bytes --title TrafficWebserver \
         STACK:binmax#f00000: \
         LINE1:binmin#a0a0a0: \
         LINE1:binmax#a0a0a0: \
-        LINE2:bin#efb71d:incoming \
-        GPRINT:bin:MIN:%.2lf \
-        GPRINT:bin:AVERAGE:%.2lf \
-        GPRINT:bin:MAX:%.2lf \
         AREA:boutmin#ffffff: \
         STACK:boutminmax#00f000: \
         LINE1:boutmin#a0a0a0: \
-        LINE1:boutmax#a0a0a0: \
-        LINE2:bout#a0a735:outgoing \
+        LINE1:boutmax#a0a0a0:  \
+        LINE2:bin#efb71d:incoming\t \
+        GPRINT:bin:MIN:%.2lf \
+        GPRINT:bin:AVERAGE:%.2lf \
+        GPRINT:bin:MAX:%.2lf\n \
+        LINE2:bout#a0a735:outgoing\t  \
         GPRINT:bout:MIN:%.2lf \
         GPRINT:bout:AVERAGE:%.2lf \
         GPRINT:bout:MAX:%.2lf \
-        " 
+        "
 
 $RRDTOOL graph $OUTDIR/$OUTPRE-hour.png -a PNG --start -14400 $DISP -w $WIDTH -h $HEIGHT
 $RRDTOOL graph $OUTDIR/$OUTPRE-day.png -a PNG --start -86400 $DISP -w $WIDTH -h $HEIGHT
@@ -53,7 +53,10 @@ DISP="-v req --title RequestsperSecond -u 1 \
         STACK:reqminmax#00f000: \
         LINE1:reqmin#a0a0a0: \
         LINE1:reqmax#a0a0a0: \
-        LINE2:req#00a735:requests" 
+        LINE2:req#00a735:requests\t \
+        GPRINT:req:MIN:%.2lf \
+        GPRINT:req:AVERAGE:%.2lf \
+        GPRINT:req:MAX:%.2lf\n " 
 
 $RRDTOOL graph $OUTDIR/$OUTPRE-hour.png -a PNG --start -14400 $DISP -w $WIDTH -h $HEIGHT
 $RRDTOOL graph $OUTDIR/$OUTPRE-day.png -a PNG --start -86400 $DISP -w $WIDTH -h $HEIGHT
