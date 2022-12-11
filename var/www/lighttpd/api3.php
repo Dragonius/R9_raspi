@@ -10,13 +10,13 @@ foreach($result as $r) {
 
     if ($result != null)
     {
-       $rows = array('a01' => (float) $r['a01']);
-       echo $r['a01'];
+        $rows = array('a01' => (float) $r['a01']);
+        echo $r['a01'];
     }
 
         if ($result == null)
     {
-       $rows = array('0' => (float) '0');
+        $rows = array('0' => (float) '0');
     }
 
 }

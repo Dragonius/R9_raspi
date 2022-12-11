@@ -5,7 +5,7 @@ function displayBackground()
 	$cnt = 0;
 	$bgArray= array();
 		
-	 		/*if we can load the directory*/
+	/*if we can load the directory*/
 	if ($handle = opendir($dir)) {
 		
 		/* Loop through the directory here */
